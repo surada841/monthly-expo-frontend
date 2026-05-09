@@ -1,0 +1,2 @@
+import {Link} from 'react-router-dom';
+export default function ModuleSelection(){return <><h2>Select Module</h2><div className="row g-4"><div className="col-md-6"><div className="card p-4"><h4>Home Expenditure</h4><p>Manage family monthly expenses.</p><Link className="btn btn-primary" to="/app/home-expenses">Open</Link></div></div><div className="col-md-6"><div className="card p-4"><h4>Tractor Income & Expenses</h4><p>Manage loads, customers, payments and repairs.</p><Link className="btn btn-success" to="/app/dashboard">Open</Link></div></div></div></>}

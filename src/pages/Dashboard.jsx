@@ -1,0 +1,2 @@
+import {useEffect,useState} from 'react'; import api from '../api/api';
+export default function Dashboard(){const [d,setD]=useState({}); useEffect(()=>{api.get('/reports/dashboard').then(r=>setD(r.data.data))},[]); const cards=[['Tractor Income',d.tractorIncome],['Tractor Expenses',d.tractorExpenses],['Tractor Profit',d.tractorProfit],['Home Expenses',d.homeExpenses]]; return <><h2>Dashboard</h2><div className="row g-3">{cards.map(c=><div className="col-md-3" key={c[0]}><div className="card p-3"><p>{c[0]}</p><h3>₹{c[1]||0}</h3></div></div>)}</div></>}
