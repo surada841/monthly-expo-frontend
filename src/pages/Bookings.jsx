@@ -187,20 +187,47 @@ export default function Bookings() {
         </div>
 
         <div className="col">
-          <select
-            className="form-select"
-            value={f.materialType}
-            onChange={(e) => setF({ ...f, materialType: e.target.value })}
-            required
-          >
-            <option value="">Select Load Name</option>
-            {["MATTI","KANKAR","SAND","NAGAVALLI SAND","ROCKS","20 MM","40MM","GK BRICKS","RK BRICKS", "BRICKS", "OTHER"].map((x) => (
-              <option value={x} key={x}>
-                {x}
-              </option>
-            ))}
-          </select>
-        </div>
+  <select
+    className="form-select"
+    value={f.materialType}
+    onChange={(e) => setF({ ...f, materialType: e.target.value })}
+    required
+  >
+    <option value="">Select Load Name</option>
+
+    <option value="MATTI">MATTI</option>
+
+    <option value="KANKAR">KANKAR</option>
+
+    <option value="SAND">SAND</option>
+
+    <option value="NAGAVALLI_SAND">
+      NAGAVALLI SAND
+    </option>
+
+    <option value="ROCKS">ROCKS</option>
+
+    <option value="TWENTY_MM">
+      20 MM
+    </option>
+
+    <option value="FORTY_MM">
+      40MM
+    </option>
+
+    <option value="GK_BRICKS">
+      GK BRICKS
+    </option>
+
+    <option value="RK_BRICKS">
+      RK BRICKS
+    </option>
+
+    <option value="BRICKS">BRICKS</option>
+
+    <option value="OTHER">OTHER</option>
+  </select>
+</div>
 
         <div className="col">
           <input
